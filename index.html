@@ -45,6 +45,34 @@
             text-decoration: underline;
         }
 
+nav {
+  background-color: #444;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
         /* Section Styles */
         section {
             padding: 50px;
@@ -113,15 +141,25 @@
     </style>
 </head>
 <body>
-
+    <a name="top"></a>
     <!-- Header Section -->
     <header>
         <h1>Vaibhav Kumar Dubey</h1>
         <p>RPA Developer</p>
         <p>Email: <a href="mailto:vaibhavdubey61@gmail.com">vaibhavdubey61@gmail.com</a></p>
         <p>Phone: +91 9877430005</p>
-        <p><a href="#">LinkedIn</a></p>
+        <p><a href="https://www.linkedin.com/in/vaibhav-kumar-dubey/">LinkedIn</a></p>
     </header>
+
+   <nav>
+    <ul>
+      <li><a href="#summary">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Work Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+    </ul>
+  </nav>
 
     <!-- Professional Summary Section -->
     <section id="summary">
@@ -136,7 +174,7 @@
     <!-- Key Skills Section -->
     <section id="skills">
         <h2>Key Skills</h2>
-        <ul>
+        
             <li><strong>Programming:</strong> C++, Python, SQL</li>
             <li><strong>Databases:</strong> SQL</li>
             <li><strong>Machine Learning</strong></li>
@@ -146,7 +184,7 @@
             <li><strong>Version Control:</strong> Git, GitHub</li>
             <li><strong>Automation:</strong> BluePrism, UI Path</li>
             <li><strong>MS Excel</strong></li>
-        </ul>
+        s
     </section>
 
     <!-- Work Experience Section -->
@@ -155,16 +193,16 @@
 
         <h3>Telloway</h3>
         <p><em>Analyst/ Consultant | March 2023 – Present</em></p>
-        <ul>
+        
             <li>Performed revenue and engagement analysis using Python, MS Excel, Power BI.</li>
             <li>Conducted market research and ensured enhanced organizational performance.</li>
             <li>Designed WordPress website.</li>
             <li>Collaborated in production of engaging content for social media websites.</li>
-        </ul>
+        
 
         <h3>Cognizant</h3>
         <p><em>RPA Developer - Programmer Analyst | March 2021 – Jan 2023</em></p>
-        <ul>
+        
             <li>Developed automated processes using Blue Prism and UI Path for the Insurance Domain.</li>
             <li>Collaborated with teammates and transferred knowledge.</li>
             <li>Performed data analysis for automated processes using Python, MS Excel, and Power BI.</li>
@@ -175,7 +213,7 @@
             <li>Implemented monitoring and alerting systems, ensuring operational excellence.</li>
             <li>Maintained peak efficiency by performing regular maintenance and updates.</li>
             <li>Facilitated knowledge transfer, providing training to 15 end-users and 2 support teams.</li>
-        </ul>
+        
 
         <p><em>Intern | Project - Car Rental System</em></p>
     </section>
@@ -206,7 +244,8 @@
             document.body.classList.toggle('dark-mode');
         }
     </script>
-
+   <a href="#top">Back to Top</a>
 </body>
 </html>
+
 
