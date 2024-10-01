@@ -4,7 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibhav Kumar Dubey - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="C:\Users\lenovo\Pictures\android-chrome-512x512.png">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Style */
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1f1f1f;
+            background-image: url('https://example.com/tech-background.jpg'); /* Replace with your techy image */
+            background-size: cover;
+            background-blend-mode: multiply;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #00adb5;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        header a {
+            color: #00adb5;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px;
+            background-color: #1f1f1f;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            color: #00adb5;
+            font-size: 2.2em;
+            border-bottom: 2px solid #00adb5;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 5px 0;
+            font-size: 1.1em;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+        }
+
+        footer p {
+            color: #666;
+        }
+
+        /* Button for JavaScript Interaction */
+        .toggle-theme {
+            background-color: #00adb5;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .toggle-theme:hover {
+            background-color: #00796b;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .dark-mode section {
+            background-color: #121212;
+        }
+
+        .dark-mode footer {
+            background-color: #121212;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +120,7 @@
         <p>RPA Developer</p>
         <p>Email: <a href="mailto:vaibhavdubey61@gmail.com">vaibhavdubey61@gmail.com</a></p>
         <p>Phone: +91 9877430005</p>
-        <p><a href="https://www.linkedin.com/in/vaibhav-kumar-dubey/">LinkedIn</a></p>
+        <p><a href="#">LinkedIn</a></p>
     </header>
 
     <!-- Professional Summary Section -->
@@ -92,7 +198,15 @@
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Vaibhav Kumar Dubey</p>
+        <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
     </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 
 </body>
 </html>
+
