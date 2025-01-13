@@ -3,249 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Kumar Dubey - Portfolio</title>
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>Vaibhav Kumar Dubey - Resume</title>
     <style>
-        /* General Style */
         body {
-            font-family: 'Roboto Mono', monospace;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
         }
 
-        /* Header Section */
         header {
             text-align: center;
-            padding: 50px 20px;
-            background-color: #1f1f1f;
-            background-image: url('https://example.com/tech-background.jpg'); /* Replace with your techy image */
-            background-size: cover;
-            background-blend-mode: multiply;
+            margin-bottom: 30px;
         }
 
-        header h1 {
-            font-size: 3em;
-            color: #00adb5;
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 2.5em;
         }
 
-        header p {
+        .title {
             font-size: 1.2em;
+            color: #7f8c8d;
             margin: 5px 0;
         }
 
-        header a {
-            color: #00adb5;
+        .contact-info {
+            margin: 15px 0;
+        }
+
+        .contact-info a {
+            color: #3498db;
             text-decoration: none;
+            margin: 0 10px;
         }
 
-        header a:hover {
-            text-decoration: underline;
+        .section {
+            margin-bottom: 30px;
         }
 
-nav {
-  background-color: #444;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-nav a:hover {
-  background-color: #555;
-}
-
-        /* Section Styles */
-        section {
-            padding: 50px;
-            background-color: #1f1f1f;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
-        section h2 {
-            color: #00adb5;
-            font-size: 2.2em;
-            border-bottom: 2px solid #00adb5;
-            padding-bottom: 10px;
+        .experience-item, .project-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .company, .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .date {
+            color: #7f8c8d;
+        }
+
+        .position {
+            font-style: italic;
+            color: #34495e;
         }
 
         ul {
-            list-style: none;
-            padding-left: 0;
+            margin: 0;
+            padding-left: 20px;
         }
 
-        ul li {
-            padding: 5px 0;
-            font-size: 1.1em;
+        li {
+            margin-bottom: 8px;
         }
 
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1f1f1f;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
-        footer p {
-            color: #666;
-        }
-
-        /* Button for JavaScript Interaction */
-        .toggle-theme {
-            background-color: #00adb5;
-            color: #000;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .toggle-theme:hover {
-            background-color: #00796b;
-        }
-
-        /* Dark Mode Styles */
-        .dark-mode {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .dark-mode section {
-            background-color: #121212;
-        }
-
-        .dark-mode footer {
-            background-color: #121212;
+        .education {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <a name="top"></a>
-    <!-- Header Section -->
     <header>
         <h1>Vaibhav Kumar Dubey</h1>
-        <p>RPA Developer</p>
-        <p>Email: <a href="mailto:vaibhavdubey61@gmail.com">vaibhavdubey61@gmail.com</a></p>
-        <p>Phone: +91 9877430005</p>
-        <p><a href="https://www.linkedin.com/in/vaibhav-kumar-dubey/">LinkedIn</a></p>
+        <div class="title">Developer</div>
+        <div class="contact-info">
+            <a href="tel:+919877430005">+91 98774-30005</a> |
+            <a href="mailto:vaibhavdubey61@gmail.com">vaibhavdubey61@gmail.com</a> |
+            <span>Korba, Chhattisgarh</span>
+        </div>
+        <div class="contact-info">
+            <a href="https://linkedin.com/in/vaibhav-kumar-dubey">LinkedIn</a> |
+            <a href="https://github.com/vaibhavdubey61">GitHub</a> |
+            <a href="https://vaibhavam.pythonanywhere.com">Portfolio</a>
+        </div>
     </header>
 
-   <nav>
-    <ul>
-      <li><a href="#summary">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Work Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-    </ul>
-  </nav>
+    <div class="section">
+        <p>Experienced developer with 3 years of industry experience. Proficient in software development methodologies, data analysis, machine learning, web development, automation and team collaboration. Seeking to advance technical skills and contribute to innovative projects.</p>
+    </div>
 
-    <!-- Professional Summary Section -->
-    <section id="summary">
-        <h2>Professional Summary</h2>
-        <p>
-            Experienced software engineer with 3 years of industry experience, specializing in software development,
-            problem-solving, automation, and team collaboration. Seeking to advance technical skills and contribute to
-            innovative projects.
-        </p>
-    </section>
+    <div class="section">
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="company">Telloway</span>
+                <span class="date">Jan 2023 – Present</span>
+            </div>
+            <div class="position">Developer</div>
+            <ul>
+                <li><b>Backend Development</b>: Streamlined backend processes by developing web services using the Django framework, aligning with dynamic business requirements</li>
+                <li><b>Frontend Development</b>: Designed and implemented responsive web interfaces utilizing HTML, CSS, and JavaScript to enhance user experience</li>
+                <li><b>Scripting</b>: Developed robust Python scripts to automate workflows, significantly reducing deployment and delivery times</li>
+                <li><b>Data Analysis</b>: Conducted comprehensive data analysis leveraging Python libraries, MS Excel, and Power BI</li>
+                <li><b>Data Visualization</b>: Created interactive dashboards in Power BI to visualize and analyze business processes</li>
+            </ul>
+        </div>
 
-    <!-- Key Skills Section -->
-    <section id="skills">
-        <h2>Key Skills</h2>
-        
-            <li><strong>Programming:</strong> C++, Python, SQL</li>
-            <li><strong>Databases:</strong> SQL</li>
-            <li><strong>Machine Learning</strong></li>
-            <li><strong>Web Development:</strong> HTML5, CSS3</li>
-            <li><strong>Frameworks:</strong> .NET</li>
-            <li><strong>Power BI</strong></li>
-            <li><strong>Version Control:</strong> Git, GitHub</li>
-            <li><strong>Automation:</strong> BluePrism, UI Path</li>
-            <li><strong>MS Excel</strong></li>
-        
-    </section>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="company">Cognizant</span>
+                <span class="date">Oct 2021 – Jan 2023</span>
+            </div>
+            <div class="position">Programmer Analyst/ RPA Developer</div>
+            <ul>
+                <li><b>RPA Development</b>: Designed and implemented automation solutions using Blue Prism and UiPath to streamline claims processing for clients in the insurance domain</li>
+                <li><b>Bot Creation</b>: Developed end-to-end bots for automating tasks such as report generation and other business-critical processes</li>
+                <li><b>Documentation</b>: Prepared detailed daily reports on automated processes</li>
+                <li><b>Data Visualization</b>: Built insightful dashboards to analyze automated process scenarios</li>
+                <li><b>RPA Lifecycle</b>: Extensive experience in managing and executing all stages of the RPA lifecycle</li>
+                <li><b>Agile Methodology</b>: Proficient in applying Agile best practices throughout development phases</li>
+                <li><b>VBA Scripting</b>: Automated complex workflows using VBA scripting</li>
+                <li><b>Production Support</b>: Delivered hands-on production support during UAT</li>
+                <li><b>Knowledge Transfer & Collaboration</b>: Facilitated seamless workflows through effective collaboration</li>
+            </ul>
+        </div>
+    </div>
 
-    <!-- Work Experience Section -->
-    <section id="experience">
-        <h2>Work Experience</h2>
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Data Analysis of Indian States 2023</span>
+            </div>
+            <div class="position">Python, Pandas, Matplotlib, Seaborn, Geopandas</div>
+            <ul>
+                <li>Description: Analyzed Census 2011 data and GDP (2018-19) data using Python libraries to create comprehensive visualizations representing demographic and economic trends across Indian states</li>
+                <li>Project Link: <a href="#">GitHub Repository</a></li>
+            </ul>
+        </div>
 
-        <h3>Telloway</h3>
-        <p><em>Analyst/ Consultant | March 2023 – Present</em></p>
-        
-            <li>Performed revenue and engagement analysis using Python, MS Excel, Power BI.</li>
-            <li>Conducted market research and ensured enhanced organizational performance.</li>
-            <li>Designed WordPress website.</li>
-            <li>Collaborated in production of engaging content for social media websites.</li>
-        
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Django Powered Blogging Website 2024</span>
+            </div>
+            <div class="position">Django, HTML, CSS, JavaScript, Bootstrap</div>
+            <ul>
+                <li>Description: Developed a full-stack web application using Django framework with responsive design principles implemented using Bootstrap and custom CSS</li>
+                <li>Live Demo: <a href="#">Live Website</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <h3>Cognizant</h3>
-        <p><em>RPA Developer - Programmer Analyst | March 2021 – Jan 2023</em></p>
-        
-            <li>Developed automated processes using Blue Prism and UI Path for the Insurance Domain.</li>
-            <li>Collaborated with teammates and transferred knowledge.</li>
-            <li>Performed data analysis for automated processes using Python, MS Excel, and Power BI.</li>
-            <li>Retrieved and optimized data storage using SQL.</li>
-            <li>Optimized automations using Machine Learning, AWS, HTML, CSS.</li>
-            <li>Spearheaded process optimization, identifying 20+ automation opportunities.</li>
-            <li>Built 25 robust Blue Prism robots, reducing processing time significantly.</li>
-            <li>Implemented monitoring and alerting systems, ensuring operational excellence.</li>
-            <li>Maintained peak efficiency by performing regular maintenance and updates.</li>
-            <li>Facilitated knowledge transfer, providing training to 15 end-users and 2 support teams.</li>
-        
-
-        <p><em>Intern | Project - Car Rental System</em></p>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
+    <div class="section">
         <h2>Education</h2>
-        <p><strong>B. Tech (CSE)</strong> | Lovely Professional University, Jalandhar, Punjab (2017-2021)</p>
-        <p>Aggregate CPI: 7.1/10</p>
-    </section>
+        <div class="education">
+            <div class="experience-header">
+                <span class="company">Lovely Professional University</span>
+                <span class="date">Aug 2017 – Jun 2021</span>
+            </div>
+            <div>B.Tech in Computer Science and Engineering</div>
+            <div>CGPA: 7.1</div>
+        </div>
+    </div>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li>Awarded as Best Contributor in Project Team for a total of 5 times.</li>
-        </ul>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Vaibhav Kumar Dubey</p>
-        <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
-    </footer>
-
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
-   <a href="#top">Back to Top</a>
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <strong>Languages & Frameworks:</strong>
+                <p>Python, Django, HTML, CSS, JavaScript, Bootstrap</p>
+            </div>
+            <div>
+                <strong>Tools & Technologies:</strong>
+                <p>RPA (Blue Prism, UiPath), Power BI, VBA</p>
+            </div>
+            <div>
+                <strong>Areas of Expertise:</strong>
+                <p>Data Analysis, Machine Learning, Web Development, Process Automation</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
-
