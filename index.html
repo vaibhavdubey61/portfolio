@@ -1,248 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhav Kumar Dubey - Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Kumar Dubey | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        h1 {
-            margin: 0;
-            color: #2c3e50;
-            font-size: 2.5em;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #1c2b33, #0e171d 80%);
+      color: #f3f3f3;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
 
-        .title {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin: 5px 0;
-        }
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(135deg, #1f4037, #16222a);
+      color: #fff;
+    }
 
-        .contact-info {
-            margin: 15px 0;
-        }
+    .profile-photo {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 0 40px rgba(112,186,255,0.4);
+    }
 
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-top: 25px;
+      letter-spacing: 1px;
+      color: #fff;
+    }
 
-        .section {
-            margin-bottom: 30px;
-        }
+    .intro {
+      font-size: 1.15rem;
+      max-width: 800px;
+      margin: 20px auto;
+      color: #ddd;
+    }
 
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
+    /* ---------- SECTION TITLES ---------- */
+    section h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      margin: 80px 0 40px;
+      font-size: 2.3rem;
+      color: #70baff;
+      position: relative;
+    }
 
-        .experience-item, .project-item {
-            margin-bottom: 20px;
-        }
+    section h2::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 80px;
+      background: #70baff;
+      margin: 10px auto 0;
+      border-radius: 10px;
+    }
 
-        .experience-header, .project-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+    /* ---------- SKILLS ---------- */
+    .skill-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 0 20px 70px;
+    }
 
-        .company, .project-title {
-            font-weight: bold;
-            color: #2c3e50;
-        }
+    .skill-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      text-align: center;
+      padding: 30px;
+      width: 230px;
+      transition: all 0.35s ease;
+    }
 
-        .date {
-            color: #7f8c8d;
-        }
+    .skill-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 0 15px rgba(112,186,255,0.3);
+    }
 
-        .position {
-            font-style: italic;
-            color: #34495e;
-        }
+    .skill-card i {
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+    }
 
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
+    .skill-card h3 {
+      margin: 10px 0;
+      font-weight: 600;
+      color: #fff;
+    }
 
-        li {
-            margin-bottom: 8px;
-        }
+    .skill-card p {
+      font-size: 0.9rem;
+      color: #cfcfcf;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+    /* ---------- EXPERIENCE ---------- */
+    .exp-tabs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+      padding: 0 20px 70px;
+    }
 
-        .education {
-            margin-bottom: 20px;
-        }
-        
-        .certifications {
-            margin-bottom: 20px;
-        }
-        
-        .button {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-        
-        .button:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    .exp-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 35px;
+      width: 80%;
+      max-width: 850px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .exp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 18px rgba(112,186,255,0.3);
+    }
+
+    .exp-card h3 {
+      color: #70baff;
+      font-size: 1.3rem;
+    }
+
+    .exp-card h4 {
+      color: #ccc;
+      font-weight: 500;
+      margin: 8px 0 15px;
+    }
+
+    .exp-card p {
+      font-size: 0.95rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .project-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+      padding: 0 20px 70px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      width: 320px;
+      text-align: center;
+      padding: 35px 25px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 18px rgba(112,186,255,0.3);
+    }
+
+    .project-card i {
+      font-size: 3.3rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: #cfcfcf;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #70baff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .project-link:hover {
+      color: #a3d3ff;
+    }
+
+    /* ---------- EDUCATION ---------- */
+    .edu-card {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 35px;
+      width: 80%;
+      max-width: 650px;
+      margin: 0 auto 70px;
+      box-shadow: 0 0 12px rgba(112,186,255,0.2);
+    }
+
+    .edu-card h3 {
+      color: #70baff;
+      font-size: 1.3rem;
+    }
+
+    .edu-card h4 {
+      color: #ccc;
+      margin: 10px 0 5px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact {
+      text-align: center;
+      padding-bottom: 70px;
+    }
+
+    .contact-items a {
+      display: inline-block;
+      margin: 10px 15px;
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-items a:hover {
+      color: #70baff;
+    }
+
+    .contact-items i {
+      font-size: 1.5rem;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    /* ---------- RESUME BUTTON ---------- */
+    .resume-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .resume-button a {
+      display: inline-block;
+      background: linear-gradient(90deg, #70baff, #559ddc);
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(112,186,255,0.3);
+    }
+
+    .resume-button a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(112,186,255,0.5);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      text-align: center;
+      background: #111;
+      color: #ccc;
+      padding: 50px 15px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .profile-photo { width: 180px; height: 180px; }
+      .name { font-size: 2.2rem; }
+      .exp-card, .edu-card { width: 90%; }
+      .skill-card { width: 160px; }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Vaibhav Kumar Dubey</h1>
-        <div class="title">Developer</div>
-        <div class="contact-info">
-            <a href="tel:+919877430005">+91 98774-30005</a> |
-            <a href="mailto:vaibhavdubey61@gmail.com">vaibhavdubey61@gmail.com</a> |
-            <span>Korba, Chhattisgarh</span>
-        </div>
-        <div class="contact-info">
-            <a href="https://linkedin.com/in/vaibhav-kumar-dubey">LinkedIn</a> |
-            <a href="https://github.com/vaibhavdubey61">GitHub</a> |
-            <a href="https://vaibhavam.pythonanywhere.com">Blog</a>
-        </div>
-    </header>
+  <header class="hero">
+    <img src="prof.png" alt="Vaibhav Kumar Dubey" class="profile-photo" />
+    <h1 class="name">Vaibhav Kumar Dubey</h1>
+    <p class="intro">
+      Results-driven Developer with 3+ years of experience specializing in Python, Django, Automation, and Data Analysis. 
+      Passionate about building intelligent, scalable solutions that optimize workflows and enhance decision-making.
+    </p>
+  </header>
 
-    <div class="section">
-        <p>Results-driven Developer with 3yrs of industrial experience, with expertise in Python, Django, and automation, skilled in database design, machine learning, and data visualization. Strong leadership, communication, and documentation skills with a collaborative approach to problem-solving. Adept at optimizing workflows and delivering high-performance solutions.</p>
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <div class="skill-tabs">
+      <div class="skill-card"><i class="devicon-python-plain colored"></i><h3>Python</h3><p>Data analysis, backend scripting & automation.</p></div>
+      <div class="skill-card"><i class="devicon-django-plain colored"></i><h3>Django</h3><p>Full-stack web apps & REST APIs.</p></div>
+      <div class="skill-card"><i class="devicon-mysql-plain colored"></i><h3>SQL</h3><p>Schema design, optimization, data queries.</p></div>
+      <div class="skill-card"><i class="devicon-amazonwebservices-original colored"></i><h3>AWS</h3><p>EC2 deployment & database integration.</p></div>
+      <div class="skill-card"><i class="devicon-powerbi-plain colored"></i><h3>Power BI</h3><p>Interactive dashboards & visualization.</p></div>
+      <div class="skill-card"><i class="devicon-html5-plain colored"></i><h3>HTML5</h3><p>Clean and semantic web layouts.</p></div>
+      <div class="skill-card"><i class="devicon-css3-plain colored"></i><h3>CSS3</h3><p>Responsive, aesthetic UI styling.</p></div>
+      <div class="skill-card"><i class="devicon-javascript-plain colored"></i><h3>JavaScript</h3><p>Dynamic UI components.</p></div>
+      <div class="skill-card"><i class="devicon-visualstudio-plain colored"></i><h3>RPA</h3><p>Automation using UiPath & Blue Prism.</p></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience">
+    <h2>Professional Experience</h2>
+    <div class="exp-tabs">
+      <div class="exp-card">
+        <h3>Telloway</h3>
+        <h4>Developer | Jan 2023 – Present</h4>
+        <p>• Built SQL integrations for CMS systems.<br>• Developed Django blogging platform & GenAI assistant.<br>• Created sentiment analysis system using NLP & RAG.<br>• Designed Power BI dashboards for KPI tracking.<br>• Optimized ETL pipelines & improved retrieval speed.</p>
+      </div>
+      <div class="exp-card">
+        <h3>Cognizant Technology Solutions</h3>
+        <h4>Programmer Analyst / RPA Developer | Oct 2021 – Jan 2023</h4>
+        <p>• Developed ML-based fraud detection system.<br>• Built automation bots using Blue Prism & UiPath.<br>• Designed Power BI dashboards & UAT support.<br>• Applied Agile methodologies for delivery efficiency.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-tabs">
+      <div class="project-card">
+        <i class="devicon-python-plain colored"></i>
+        <h3>Census 2011 Data Analysis</h3>
+        <p>Analyzed Census & GDP data using Python, Pandas & Seaborn for visualization of economic trends across India.</p>
+        <a href="https://github.com/vaibhavdubey61/Census2011_Analysis" target="_blank" class="project-link">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <i class="devicon-django-plain colored"></i>
+        <h3>Django Blogging Website</h3>
+        <p>Developed & hosted a responsive blog using Django, Bootstrap & custom CSS.</p>
+        <a href="https://vaibhavdubey61.pythonanywhere.com" target="_blank" class="project-link">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="education">
+    <h2>Education</h2>
+    <div class="edu-card">
+      <h3>Lovely Professional University</h3>
+      <h4>B.Tech in Computer Science & Engineering | 2017 – 2021</h4>
+      <p>CGPA: 7.1</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <div class="contact-items">
+      <a href="mailto:vaibhavdubey61@gmail.com"><i class="devicon-google-plain colored"></i>vaibhavdubey61@gmail.com</a>
+      <a href="tel:+919877430005"><i class="devicon-android-plain colored"></i>+91 98774 30005</a>
+      <a href="https://linkedin.com/in/vaibhav-kumar-dubey" target="_blank"><i class="devicon-linkedin-plain colored"></i>LinkedIn</a>
+      <a href="https://github.com/vaibhavdubey61" target="_blank"><i class="devicon-github-original colored"></i>GitHub</a>
+      <a href="https://vaibhavdubey61.pythonanywhere.com" target="_blank"><i class="devicon-html5-plain colored"></i>Portfolio Website</a>
     </div>
 
-    <div class="section">
-        <h2>Professional Experience</h2>
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Telloway</span>
-                <span class="date">Jan 2023 – Present</span>
-            </div>
-            <div class="position">Developer</div>
-            <ul>
-                <li><b>Database CMS Integration:</b> Developed custom SQL integration between database systems and CMS, enabling automated content synchronization and reducing manual data entry</li>
-                <li><b>Database Architecture:</b> Designed efficient database relationships in Django for a blogging platform, optimizing SQL queries to fetch complex content relationships and improve site performance</li>
-                <li><b>Django Blog:</b> Led a cross-functional team to develop a high-performance blogging platform using Django, helped in increasing user engagement</li>
-                <li><b>Sentiment Analyzer:</b> Engineered a sentiment analysis system using NLP techniques to process and analyze social media data, providing actionable insights that optimized content strategies and enhanced brand engagement</li>
-                <li><b>Front-End Development:</b> Designed and implemented responsive web interfaces utilizing HTML, CSS, JavaScript & Bootstrap to enhance user experience</li>
-                <li><b>Scripting:</b> Developed robust Python scripts to automate workflows, significantly reducing deployment and delivery times</li>
-                <li><b>Data Analysis & Optimization:</b> Conducted comprehensive data analysis leveraging Python libraries and MS Excel to identify and resolve query bottlenecks in content retrieval, improving user engagement metrics across the platform</li>
-                <li><b>Data Visualization:</b> Developed interactive Power BI dashboards to visualize KPIs, enabling editorial and marketing teams to track audience engagement, content consumption, and identify trends for strategic decision-making</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="company">Cognizant</span>
-                <span class="date">Oct 2021 – Jan 2023</span>
-            </div>
-            <div class="position">Programmer Analyst/ RPA Developer</div>
-            <ul>
-                <li><b>RPA Development:</b> Designed and implemented automation solutions using Blue Prism and UiPath to streamline claims processing for clients in the insurance domain</li>
-                <li><b>Fraud Insurance Claim Detector:</b> Engineered an ensemble machine learning fraud detection system for insurance claims, empowering stakeholders with data-driven insights that enhanced decision quality and operational efficiency</li>
-                <li><b>Bot Creation:</b> Developed end-to-end bots for automating tasks such as report generation and other business-critical processes, ensuring efficiency and accuracy</li>
-                <li><b>Documentation:</b> Prepared detailed daily reports on automated processes, ensuring seamless and uninterrupted workflows aligned with business requirements</li>
-                <li><b>Data Visualization:</b> Engineered specialized Microsoft Power BI dashboards and interfaces for the development team, providing critical real-time metrics and actionable insights that accelerated troubleshooting and optimized development workflows</li>
-                <li><b>RPA Lifecycle:</b> Extensive experience in managing and executing all stages of the RPA lifecycle</li>
-                <li><b>Agile Methodology:</b> Proficient in applying Agile best practices throughout development phases to enhance team collaboration and project efficiency</li>
-                <li><b>VBA Scripting:</b> Automated complex workflows using VBA scripting, ensuring error-free execution and optimized processes</li>
-                <li><b>Production Support:</b> Delivered hands-on production support during User Acceptance Testing (UAT), ensuring smooth deployment and operation of automation projects</li>
-                <li><b>Knowledge Transfer & Collaboration:</b> Facilitated seamless workflows through effective collaboration with cross-functional teams and structured knowledge transfer sessions</li>
-            </ul>
-        </div>
+    <div class="resume-button">
+      <a href="e_resume.html" target="_blank">📄 View My Digital Resume</a>
     </div>
+  </section>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <div class="project-item">
-            <div class="project-header">
-                <span class="project-title">Census 2011 Data Analysis of Indian States 2023</span>
-            </div>
-            <div class="position">Python, Pandas, Matplotlib, Seaborn, Geopandas</div>
-            <ul>
-                <li>Description: Analyzed Census 2011 data and GDP (2018-19) data using Python libraries to create comprehensive visualizations representing demographic and economic trends across Indian states</li>
-                <li>Project Link: <a href="#">GitHub Repository</a></li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="project-header">
-                <span class="project-title">Django Powered Blogging Website 2024</span>
-            </div>
-            <div class="position">Django, HTML, CSS, JavaScript, Bootstrap</div>
-            <ul>
-                <li>Description: Developed a full-stack web application using Django framework with responsive design principles implemented using Bootstrap and custom CSS</li>
-                <li>Live Demo: <a href="#">Live Website</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Education</h2>
-        <div class="education">
-            <div class="experience-header">
-                <span class="company">Lovely Professional University</span>
-                <span class="date">Aug 2017 – Jun 2021</span>
-            </div>
-            <div>B.Tech in Computer Science and Engineering</div>
-            <div>CGPA: 7.1</div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div>
-                <strong>Languages & Frameworks:</strong>
-                <p>Python, Django, HTML, CSS, JavaScript, Bootstrap</p>
-            </div>
-            <div>
-                <strong>Tools & Technologies:</strong>
-                <p>RPA (Blue Prism, UiPath), SQL, Power BI, VBA</p>
-            </div>
-            <div>
-                <strong>Areas of Expertise:</strong>
-                <p>Data Analysis, Machine Learning, Deep Learning, Web Development, Process Automation</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Certifications</h2>
-        <ul>
-            <li>SQL Intermediate Certification (<a href="#">View Certificate</a>)</li>
-            <li>SQL Basic Certification (<a href="#">View Certificate</a>)</li>
-            <li>Google Maps Web Platform Badge (<a href="#">View Certificate</a>)</li>
-            <li>UI Path Certification (<a href="#">View Certificate</a>)</li>
-            <li>Generative AI Certification (<a href="#">View Certificate</a>)</li>
-        </ul>
-    </div>
-
-    <a href="assets/resume_vaibhav.pdf" class="button" download>
-    Download Resume PDF
-    </a>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>“The best way to predict the future is to create it.”</p>
+  </footer>
 </body>
 </html>
